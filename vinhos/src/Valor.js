@@ -1,6 +1,6 @@
 import React from 'react';
 
-const maiorValor = () => {
+const Valor = () => {
   const clientesValor = [
     {
       id: 8,
@@ -70,10 +70,10 @@ const maiorValor = () => {
       <ul>
         {clientesValor.map(({ id, nome, cpf, valorTotal }) => (
           <li key={id}>
-            <p>{id}</p>
-            <p>{nome}</p>
-            <p>{cpf}</p>
-            <h3>{valorTotal}</h3>
+            <p>Id: {id}</p>
+            <p>Nome: {nome}</p>
+            <p>CPF: {cpf}</p>
+            <h3>Valor Total: {valorTotal}</h3>
           </li>
         ))}
       </ul>
@@ -81,4 +81,4 @@ const maiorValor = () => {
   );
 };
 
-export default maiorValor;
+export default Valor;
