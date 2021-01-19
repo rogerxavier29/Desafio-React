@@ -66,6 +66,8 @@ const App = () => {
 
   return (
     <ul>
+      <h1>Lista Ordenada de Clientes pelo Maior Valor de Compras </h1>
+
       {clientesValor.map(({ id, nome, cpf, valorTotal }) => (
         <li key={id}>
           <p>{id}</p>

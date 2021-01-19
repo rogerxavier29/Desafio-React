@@ -64,7 +64,21 @@ const maiorValor = () => {
     },
   ];
 
-  return <div></div>;
+  return (
+    <div>
+      <h1>Lista Ordenada de Clientes pelo Maior Valor de Compras </h1>
+      <ul>
+        {clientesValor.map(({ id, nome, cpf, valorTotal }) => (
+          <li key={id}>
+            <p>{id}</p>
+            <p>{nome}</p>
+            <p>{cpf}</p>
+            <h3>{valorTotal}</h3>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default maiorValor;
