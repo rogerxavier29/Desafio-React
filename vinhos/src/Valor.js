@@ -1,74 +1,30 @@
 import React from 'react';
+import { useState } from 'react/cjs/react.development';
 
 const Valor = () => {
-  const clientesValor = [
-    {
-      id: 8,
-      nome: 'Jonathan',
-      cpf: '000.000.000-08',
-      valorTotal: 3190.7000000000003,
-    },
-    {
-      id: 5,
-      nome: 'Raquel',
-      cpf: '000.000.000-05',
-      valorTotal: 2299.6,
-    },
-    {
-      id: 4,
-      nome: 'Gustavo',
-      cpf: '000.000.000-04',
-      valorTotal: 2115.8,
-    },
-    {
-      id: 3,
-      nome: 'Joel',
-      cpf: '000.000.000-03',
-      valorTotal: 2090.3,
-    },
-    {
-      id: 6,
-      nome: 'Pamela',
-      cpf: '000.000.000-06',
-      valorTotal: 1910.6999999999998,
-    },
-    {
-      id: 7,
-      nome: 'Bruno',
-      cpf: '000.000.000-07',
-      valorTotal: 1833,
-    },
-    {
-      id: 2,
-      nome: 'Marcos',
-      cpf: '000.000.000-02',
-      valorTotal: 1308,
-    },
-    {
-      id: 10,
-      nome: 'Rafael',
-      cpf: '000.000.000-10',
-      valorTotal: 977.8,
-    },
-    {
-      id: 9,
-      nome: 'Matheus',
-      cpf: '000.000.000-09',
-      valorTotal: 879.6,
-    },
-    {
-      id: 1,
-      nome: 'Vinicius',
-      cpf: '000.000.000-01',
-      valorTotal: 729,
-    },
-  ];
+  const [valorMaior, setValorMaior] = useState([]);
+  const URL_TO_FETCH =
+    'https://vendavinhos-backend.herokuapp.com/clientsOrderedByPurchase';
+
+  React.useEffect(() => {
+    fetch(URL_TO_FETCH, {
+      method: 'get', // opcional
+    })
+      .then(function (response) {
+        response.json().then(function (data) {
+          setValorMaior(data);
+        });
+      })
+      .catch(function (err) {
+        console.error(err);
+      });
+  }, []);
 
   return (
     <div>
       <h1>Lista Ordenada de Clientes pelo Maior Valor de Compras </h1>
       <ul>
-        {clientesValor.map(({ id, nome, cpf, valorTotal }) => (
+        {valorMaior.map(({ id, nome, cpf, valorTotal }) => (
           <li key={id}>
             <p>Id: {id}</p>
             <p>Nome: {nome}</p>
