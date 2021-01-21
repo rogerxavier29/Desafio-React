@@ -1,0 +1,30 @@
+.estrutura {
+  background: #a52a2a;
+}
+
+.titulo {
+  text-align: center;
+}
+
+.estrutura2 {
+  width: 400px;
+  height: 200px;
+  margin-top: 50px;
+  margin-left: 400px;
+  border-radius: 20px;
+  background: silver;
+  border: solid;
+}
+
+.ul {
+  align-items: center;
+}
+
+.li {
+  align-items: center;
+  margin-top: 5px;
+}
+p {
+  margin-left: 20px;
+  margin-top: 20px;
+}

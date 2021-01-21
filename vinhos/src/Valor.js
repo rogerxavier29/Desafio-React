@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Valor.module.css';
 import { useState } from 'react/cjs/react.development';
 
 const Valor = () => {
@@ -21,16 +22,20 @@ const Valor = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Lista Ordenada de Clientes pelo Maior Valor de Compras </h1>
-      <ul>
+    <div className={styles.estrutura}>
+      <h1 className={styles.titulo}>
+        Lista Ordenada de Clientes pelo Maior Valor de Compras{' '}
+      </h1>
+      <ul className={styles.ul}>
         {valorMaior.map(({ id, nome, cpf, valorTotal }) => (
-          <li key={id}>
-            <p>Id: {id}</p>
-            <p>Nome: {nome}</p>
-            <p>CPF: {cpf}</p>
-            <h3>Valor Total: {valorTotal}</h3>
-          </li>
+          <div className={styles.estrutura2}>
+            <li className={styles.li} key={id}>
+              <p>Id: {id}</p>
+              <p>Nome: {nome}</p>
+              <p>CPF: {cpf}</p>
+              <p>Valor Total: {valorTotal}</p>
+            </li>
+          </div>
         ))}
       </ul>
     </div>
