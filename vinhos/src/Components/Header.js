@@ -10,10 +10,13 @@ const Header = () => {
           Ordem de Consumo
         </Link>
         <Link className={styles.fieis} to="compra">
-          Clientes fieis.
+          Clientes fieis
         </Link>
         <Link className={styles.master} to="cliente">
-          Cliente Master.
+          Cliente Master
+        </Link>
+        <Link className={styles.recomendado} to="cliente">
+          Vinho Recomendado
         </Link>
       </nav>
     </header>
