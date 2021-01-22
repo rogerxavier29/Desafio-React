@@ -7,6 +7,7 @@ import Header from './Components/Header';
 import Compra from './Compra';
 import Valor from './Valor';
 import Recomendado from './Recomendado';
+import Home from './Home';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Header />
         <main className="AppBody">
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="valor" element={<Valor />} />
             <Route path="compra" element={<Compra />} />
             <Route path="cliente" element={<Cliente />} />
