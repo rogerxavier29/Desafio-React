@@ -4,7 +4,9 @@ import styles from './Footer.module.css';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <p>Vinhos Velazques. Alguns direitos reservados.</p>
+      <p className={styles.pfooter}>
+        Vinhos Velazques. Alguns direitos reservados.
+      </p>
     </footer>
   );
 };
