@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const Recomendado = () => {
-  const [pegarCliente, setPegarCliente] = useState([]);
+  const [select, setSelect] = useState([]);
   const URL_TO_FETCH = 'https://vendavinhos-backend.herokuapp.com/clients';
 
   React.useEffect(() => {
@@ -10,7 +10,7 @@ const Recomendado = () => {
     })
       .then(function (response) {
         response.json().then(function (data) {
-          setPegarCliente(data);
+          setSelect(data);
         });
       })
       .catch(function (err) {
@@ -20,20 +20,16 @@ const Recomendado = () => {
 
   return (
     <div>
-      {pegarCliente.map((id, cpf, nome) => (
-        <select value={cpf} name="" id="" key={cpf}>
-          <option value={pegarCliente.id}>{pegarCliente.id}</option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-        </select>
-      ))}
+      <select
+        value={select.cpf}
+        onChange={(cpf) => setSelect(select.target.value)}
+      >
+        {select.map((cpf, nome) => (
+          <option key={cpf} value={nome}>
+            {select.nome}
+          </option>
+        ))}
+      </select>
     </div>
   );
 };
