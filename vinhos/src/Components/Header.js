@@ -6,6 +6,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
+        <h2 className={styles.tprincipal}>Velasquez</h2>
         <Link className={styles.ordem} to="valor">
           Ordem de Consumo
         </Link>
