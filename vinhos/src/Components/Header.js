@@ -10,10 +10,10 @@ const Header = () => {
           Ordem de Consumo
         </Link>
         <Link className={styles.fieis} to="compra">
-          Clientes fieis
+          Cliente Master
         </Link>
         <Link className={styles.master} to="cliente">
-          Cliente Master
+          Cliente Fiéis
         </Link>
         <Link className={styles.recomendado} to="cliente">
           Vinho Recomendado
