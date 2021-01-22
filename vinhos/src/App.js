@@ -6,18 +6,24 @@ import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Compra from './Compra';
 import Valor from './Valor';
+import Recomendado from './Recomendado';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="valor" element={<Valor />} />
-        <Route path="compra" element={<Compra />} />
-        <Route path="cliente" element={<Cliente />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
+        <Header />
+        <main className="AppBody">
+          <Routes>
+            <Route path="valor" element={<Valor />} />
+            <Route path="compra" element={<Compra />} />
+            <Route path="cliente" element={<Cliente />} />
+            <Route path="recomendado" element={<Recomendado />} />
+          </Routes>
+        </main>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 };
 

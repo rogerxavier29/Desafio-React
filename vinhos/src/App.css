@@ -8,10 +8,21 @@ h3,
 h4,
 p {
   margin: 0px;
+  cursor: pointer;
 }
 ul,
 li {
   list-style: none;
   padding: 0px;
   margin: 0px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.AppBody {
+  flex: 1;
+  min-height: calc(100vh + 10rem);
 }
