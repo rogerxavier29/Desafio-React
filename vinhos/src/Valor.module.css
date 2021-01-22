@@ -1,11 +1,10 @@
 .estrutura {
   background: #a52a2a;
-  max-width: 100%;
+  padding-top: 30px;
 }
 
 .titulo {
   text-align: center;
-  margin-top: 30px;
 }
 
 .estrutura2 {
@@ -16,11 +15,11 @@
   border-radius: 20px;
   background: silver;
   border: solid;
-  margin-bottom: 50px;
 }
 
 .ul {
   align-items: center;
+  padding-bottom: 50px;
 }
 
 .li {

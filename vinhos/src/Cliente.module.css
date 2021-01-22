@@ -1,5 +1,7 @@
 .estrutura {
   background: #a52a2a;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .estrutura2 {
@@ -10,4 +12,9 @@
   border-radius: 20px;
   background: silver;
   border: solid;
+  margin-bottom: 30px;
+}
+
+h1 {
+  padding-bottom: 20px;
 }
