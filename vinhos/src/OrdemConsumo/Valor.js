@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Valor.module.css';
 import { useState } from 'react/cjs/react.development';
+import Head from '../Components/Head';
 
 const Valor = () => {
   const [valorMaior, setValorMaior] = useState([]);
@@ -23,6 +24,7 @@ const Valor = () => {
 
   return (
     <div className={styles.estrutura}>
+      <Head title="Ordem de Consumo" description="Home" />
       <h1 className={styles.titulo}>
         Lista Ordenada de Clientes pelo Maior Valor de Compras{' '}
       </h1>

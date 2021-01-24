@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Head from '../Components/Head';
 import styles from './Compra.module.css';
 
 const Compra = () => {
@@ -21,6 +22,7 @@ const Compra = () => {
 
   return (
     <div className={styles.estrutura}>
+      <Head title="Cliente Master" description="Cliente Master em 2016" />
       <h1>* Cliente - Master - 2016 *</h1>
       <div className={styles.estrutura2}>
         <li>

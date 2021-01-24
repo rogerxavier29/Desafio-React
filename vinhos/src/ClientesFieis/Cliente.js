@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './Cliente.module.css';
+import Head from '../Components/Head';
 
 const Cliente = () => {
-  const [clienteMaster, setClienteMaster] = React.useState([]);
+  const [clientesFieis, setClientesFieis] = React.useState([]);
   const URL_TO_FETCH = 'https://vendavinhos-backend.herokuapp.com/bestClients';
 
   React.useEffect(() => {
@@ -11,7 +12,7 @@ const Cliente = () => {
     })
       .then(function (response) {
         response.json().then(function (data) {
-          setClienteMaster(data);
+          setClientesFieis(data);
         });
       })
       .catch(function (err) {
@@ -21,10 +22,11 @@ const Cliente = () => {
 
   return (
     <div className={styles.estrutura}>
+      <Head title="Clientes Fiéis" description="Home" />
       <h1>Clientes Master - Fiéis</h1>
       <ul>
-        {clienteMaster &&
-          clienteMaster.map(({ id, nome, cpf, totalCompras }) => (
+        {clientesFieis &&
+          clientesFieis.map(({ id, nome, cpf, totalCompras }) => (
             <li key={id}>
               <div className={styles.estrutura2}>
                 <p>Nome: {nome}</p>
