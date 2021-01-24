@@ -16,7 +16,7 @@ const Header = () => {
         <Link className={styles.master} to="cliente">
           Cliente Fiéis
         </Link>
-        <Link className={styles.recomendado} to="cliente">
+        <Link className={styles.recomendado} to="recomendado">
           Vinho Recomendado
         </Link>
       </nav>
