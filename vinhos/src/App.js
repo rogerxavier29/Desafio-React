@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Cliente from './Cliente';
+import Cliente from './ClientesFieis/Cliente';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
-import Compra from './Compra';
-import Valor from './Valor';
-import Recomendado from './Recomendado';
+import Compra from './ClienteMaster/Compra';
+import Valor from './OrdemConsumo/Valor';
+import Recomendado from './Recomendado/Recomendado';
 import Home from './Home';
 
 const App = () => {
