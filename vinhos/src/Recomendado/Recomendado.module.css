@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&display=swap');
+
+.estrutura {
+  background: #a52a2a;
+  height: 770px;
+  padding-top: 1px;
+}
+
+.h1title {
+  margin-top: 30px;
+  font-size: 40px;
+}
+
+.form {
+  width: 400px;
+  height: 380px;
+  margin-top: 50px;
+  margin-left: 400px;
+  border-radius: 20px;
+  background: silver;
+  border: solid;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.h3vinhos {
+  margin-top: 15px;
+  margin-left: 20px;
+  font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+select {
+  margin-top: 20px;
+  margin-left: 30px;
+  border-radius: 5px;
+  width: 160px;
+  height: 25px;
+}
+
+.vinhos {
+  margin-top: 10px;
+}
+
+li {
+  margin-left: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
